@@ -26,7 +26,7 @@ namespace BSModUI
      * - 
      */
 
-    struct ModSelection
+    class ModSelection
     {
         public Toggle Toggle;
         public TextMeshProUGUI Text;
@@ -40,12 +40,12 @@ namespace BSModUI
         }
     }
 
-    struct Mod
+    class Mod
     {
         public string Version { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
-        public IPlugin GetPlugin{ get; set;}
+        public IPlugin GetPlugin { get; set; }
         // TODO: prop for Image
     }
 
@@ -53,7 +53,7 @@ namespace BSModUI
     {
         private ModMenuUi _modMenuUi = FindObjectOfType<ModMenuUi>();
 
-        
+
         private Button _backButton;
 
         public ModsListViewController _modsListViewController;
@@ -69,7 +69,7 @@ namespace BSModUI
             _modMenuUi = FindObjectOfType<ModMenuUi>();
             try
             {
-                
+
                 _backButton = _modMenuUi.CreateBackButton(rectTransform);
                 (_backButton.transform as RectTransform).anchorMin = new Vector2(0, 0);
                 (_backButton.transform as RectTransform).anchorMin = new Vector2(0, 0);
@@ -82,17 +82,17 @@ namespace BSModUI
                 {
                     _modsListViewController = _modMenuUi.CreateViewController<ModsListViewController>();
                 }
-                
+
 
                 _modsListViewController.rectTransform.anchorMin = new Vector2(0.3f, 0f);
                 _modsListViewController.rectTransform.anchorMax = new Vector2(0.7f, 1f);
 
-                PushViewController(_modsListViewController,true);
+                PushViewController(_modsListViewController, true);
 
                 Utils.Log("View Controller activated");
-                
 
-                
+
+
                 base.DidActivate();
             }
             catch (Exception ex)
@@ -100,15 +100,15 @@ namespace BSModUI
                 Utils.Log(ex.StackTrace + ex.Message, Utils.Severity.Error);
             }
         }
-        
+
 
         protected override void DidDeactivate()
         {
             _modDetailsPushed = false;
         }
 
-        
 
-        
+
+
     }
 }

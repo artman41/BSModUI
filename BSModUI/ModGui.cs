@@ -7,13 +7,13 @@ using IllusionPlugin;
 
 namespace BSModUI
 {
-   public interface ModGui : IPlugin
+    public interface ModGui : IPlugin
     {
         string Author { get; }
-        string Image { get;}
-       // VRUIViewController CustomViewController { get; set; }
+        string Image { get; }
+        // VRUIViewController CustomViewController { get; set; }
         bool isEnabled { get; }
     }
-   
-    
+
+
 }

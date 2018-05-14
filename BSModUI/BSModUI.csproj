@@ -57,6 +57,10 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\metafet\BeatSaberSongInjector\BSSongLoader\bin\Debug\Unity Dependencies\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
@@ -70,6 +74,10 @@
     <Reference Include="UnityEngine.UIModule">
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\metafet\BeatSaberSongInjector\BSSongLoader\bin\Debug\Unity Dependencies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModGui.cs" />
@@ -81,6 +89,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionUtil.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="VersionChecker\Interfaces\IGithubInfoPlugin.cs" />
+    <Compile Include="VersionChecker\Misc\CoroutineWithData.cs" />
+    <Compile Include="VersionChecker\Misc\Github\GithubReleasePage.cs" />
+    <Compile Include="VersionChecker\Misc\LatestPluginInfo.cs" />
+    <Compile Include="VersionChecker\Misc\LatestPluginInfoEvent.cs" />
+    <Compile Include="VersionChecker\Misc\ReflectionUtil.cs" />
+    <Compile Include="VersionChecker\Misc\Util.cs" />
+    <Compile Include="VersionChecker\Misc\VCInterop.cs" />
+    <Compile Include="VersionChecker\Plugin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
